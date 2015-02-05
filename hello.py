@@ -1,6 +1,12 @@
 from flask import Flask, request, redirect, url_for
 app = Flask(__name__)
 
+dbFile = 'db1.db'
+conn = None
+
+def get_conn():
+    global conn
+
 tasks = []
 
 @app.route('/hello')
@@ -13,7 +19,7 @@ def task1():
     if request.method == 'POST':
       category = request.form['category']
       tasks.append({'category':category})
-      return redirect('/')    # 
+      return redirect('/')    #
       #return redirect(url_for('task1'))  # name of method instead of aboe
 
     # GET

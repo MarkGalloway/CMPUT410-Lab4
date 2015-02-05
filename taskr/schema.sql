@@ -1,8 +1,8 @@
-drop table if exists entries;
+drop table if exists tasks;
 
-create table entries (
+create table tasks (
   id integer primary key autoincrement,
   priority integer not null,
   category text not null,
-  descirption text not null
+  description text not null
 );
