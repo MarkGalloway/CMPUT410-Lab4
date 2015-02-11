@@ -5,7 +5,7 @@ Flask
 
 # Running Instructions
 cd taskr
-flask --app=taskr initdb
+flask --app=taskr initdb    
 python taskr.py
 
 # Viewing Instructions
